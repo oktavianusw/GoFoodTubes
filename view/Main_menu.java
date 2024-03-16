@@ -1,7 +1,9 @@
 package view;
 
 import java.util.Scanner;
-import view.Login;
+
+import model.UserType;
+import view.Login_menu;
 
 public class Main_menu {
 
@@ -17,10 +19,10 @@ public class Main_menu {
 
         switch (input.nextInt()) {
              case 1:
-                 Seller_menu();
-                 break;
+                Login_menu.login(UserType.SELLER);
+                break;
             case 2:
-                Login.login();
+                Login_menu.login(UserType.CUSTOMER);
                 break;
             case 3:
                 System.exit(0);

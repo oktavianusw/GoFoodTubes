@@ -1,12 +1,12 @@
 package view;
-
-import model.User;
+import model.Seller;
 
 import java.util.Scanner;
 
 public class Seller_menu {
     public static Scanner input = new Scanner(System.in);
-    public static void customer_menu(User user){
+
+    public static void seller_menu(Seller cust){
         System.out.println("===============");
         System.out.println("\tCustomer Menu");
         System.out.println("===============");
@@ -43,7 +43,7 @@ public class Seller_menu {
                 break;
             default:
                 System.out.println("Invalid input");
-                customer_menu(user);
+                seller_menu(cust);
                 break;
         }
     }
