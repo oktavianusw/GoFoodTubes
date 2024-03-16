@@ -16,9 +16,9 @@ public class Main_menu {
         System.out.print("Choose : ");
 
         switch (input.nextInt()) {
-            // case 1:
-            //     // seller_menu();
-                // break;
+             case 1:
+                 Seller_menu();
+                 break;
             case 2:
                 Login.login();
                 break;
