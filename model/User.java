@@ -14,6 +14,9 @@ public class User {
         this.password = password;
         this.userType = userType;
     }
+    public User(String username2, String password2, String email2, String phone) {
+        //TODO Auto-generated constructor stub
+    }
     public int getUserId() {
         return userId;
     }
