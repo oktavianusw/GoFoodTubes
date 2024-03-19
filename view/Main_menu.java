@@ -13,7 +13,7 @@ public class Main_menu {
         System.out.println("GoFood as : ");
         System.out.println("1. GoSeller");
         System.out.println("2. GOCustomer");
-        System.out.println("3. Exit");
+        System.out.println("0. Exit");
 
         System.out.print("Choose : ");
 
@@ -24,7 +24,7 @@ public class Main_menu {
             case 2:
                 Login_menu.login(UserType.CUSTOMER);
                 break;
-            case 3:
+            case 0:
                 System.exit(0);
                 break;
             default:
