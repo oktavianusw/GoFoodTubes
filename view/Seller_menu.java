@@ -7,9 +7,9 @@ public class Seller_menu {
     public static Scanner input = new Scanner(System.in);
 
     public static void seller_menu(Seller cust){
-        System.out.println("===============");
-        System.out.println("\tCustomer Menu");
-        System.out.println("===============");
+        System.out.println("========================");
+        System.out.println("\tSeller Menu");
+        System.out.println("========================");
         System.out.println("1. View Profile");
         System.out.println("2. View Order");
         System.out.println("3. View Transaction");

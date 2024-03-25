@@ -11,7 +11,7 @@ public class Login_menu {
     
     public static void login(UserType userType){
         int attempts = 0;
-        while (attempts < 3) {
+        while (attempts < 3 ) {
             System.out.println();
             System.out.println("=====================");
             System.out.println("\tLogin");
@@ -21,17 +21,14 @@ public class Login_menu {
             System.out.println("Password : ");
             String password = input.nextLine();
 
-            if (login_controller.login(email, password, userType) != null) {
-                if(userType.equals(UserType.CUSTOMER)){
-                    Customer_menu.customer_menu(email);
-                } else {
-                    Seller_menu.seller_menu(email);
-                }
+            if (login_controller.login(email, password, userType)) {
+                return;
             } else {
                 System.out.println("Login failed. Incorrect username or password. Please try again.");
                 attempts++;
             }
         }
-        System.out.println("You have exceeded the maximum number of login attempts.");
-    }
+        if (attempts >= 3) {
+            System.out.println("You have exceeded the maximum number of login attempts.");
+        }    }
 }
