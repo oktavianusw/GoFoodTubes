@@ -29,13 +29,14 @@ public class Wallet_menu {
                 break;
             case 3:
                 System.out.println("Enter the amount you want to transfer: ");
-                int amount = input.nextInt();
-                Wallet_controller.transfer(cust, amount);
+                int transfer = input.nextInt();
+                Wallet_controller.transfer(cust, transfer);
                 break;
             case 0:
                 Main_menu.main_menu();
             default:
                 System.out.println("Invalid Input");
+                main_menu(cust);
                 break;
         }
     }

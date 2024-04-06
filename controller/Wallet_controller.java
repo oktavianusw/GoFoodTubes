@@ -16,6 +16,5 @@ public class Wallet_controller {
     public static void transfer(Customer cust, int amount){
         cust.decreaseWallet(amount);
         cust.increaseWallet(amount);
-
     }
 }
