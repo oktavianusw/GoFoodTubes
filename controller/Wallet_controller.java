@@ -15,6 +15,6 @@ public class Wallet_controller {
     }
     public static void transfer(Customer cust, int amount){
 
-        cust.getClass().getDeclaredField("wallet") cust.getWallet() - amount;
+        cust.getClass().getDeclaredField("wallet"); cust.getWallet() - amount;
     }
 }
