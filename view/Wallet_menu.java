@@ -28,9 +28,11 @@ public class Wallet_menu {
                 Wallet_controller.top_up(cust, topUp);
                 break;
             case 3:
+                System.out.println("Type User Email: ");
+                String email = input.nextLine();
                 System.out.println("Enter the amount you want to transfer: ");
                 int transfer = input.nextInt();
-                Wallet_controller.transfer(cust, transfer);
+                Wallet_controller.transfer(cust, email, transfer);
                 break;
             case 0:
                 Main_menu.main_menu();

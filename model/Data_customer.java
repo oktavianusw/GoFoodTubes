@@ -16,4 +16,13 @@ public class Data_customer {
         cart.addFood(Data_food.foods[1], 1);
         return cart;
     }
+
+    public static Customer getUserbyEmail(String email) {
+        for (Customer user : cust){
+            if (user.getEmail().equals(email)) {
+                return user;
+            }
+        }
+        return null;
+    }
 }
