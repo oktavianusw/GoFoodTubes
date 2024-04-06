@@ -14,7 +14,8 @@ public class Wallet_controller {
         cust.increaseWallet(amount);
     }
     public static void transfer(Customer cust, int amount){
+        cust.decreaseWallet(amount);
+        cust.increaseWallet(amount);
 
-        cust.getClass().getDeclaredField("wallet"); cust.getWallet() - amount;
     }
 }
