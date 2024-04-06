@@ -2,8 +2,6 @@ package controller;
 
 import model.Customer;
 
-import java.sql.SQLOutput;
-
 public class Wallet_controller {
 
     public static Customer cust;
@@ -12,10 +10,11 @@ public class Wallet_controller {
         System.out.println("Rp" + cust.getWallet());
     }
 
-    public static void transfer(Customer cust){
-
+    public static void top_up(Customer cust, int amount){
+        cust.increaseWallet(amount);
     }
-    public static void top_up(Customer cust){
+    public static void transfer(Customer cust, int amount){
 
+        cust.getClass().getDeclaredField("wallet") cust.getWallet() - amount;
     }
 }
