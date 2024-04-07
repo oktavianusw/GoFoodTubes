@@ -23,14 +23,14 @@ public class Wallet_menu {
                 Wallet_controller.view_balance(cust);
                 break;
             case 2:
-                System.out.println("Enter the amount you want to top up: ");
+                System.out.println("Masukan Nominal: ");
                 int topUp = input.nextInt();
                 Wallet_controller.top_up(cust, topUp);
                 break;
             case 3:
-                System.out.println("Type User Email: ");
+                System.out.println("Masukan Email tujuan: ");
                 String email = input.nextLine();
-                System.out.println("Enter the amount you want to transfer: ");
+                System.out.println("Masukan Nominal: ");
                 int transfer = input.nextInt();
                 Wallet_controller.transfer(cust, email, transfer);
                 break;
