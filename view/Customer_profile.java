@@ -14,7 +14,7 @@ public class Customer_profile {
         System.out.println("=============================");
         System.out.println("Username: " + cust.getUsername());
         System.out.println("Email: " + cust.getEmail());
-        System.out.println("Wallet: " + cust.getWallet());
+        System.out.println("Wallet: " + cust.getBalance());
 
         System.out.println("1. Edit Profile");
         System.out.println("0. Back");
@@ -41,7 +41,7 @@ public class Customer_profile {
         System.out.println("=============================");
         System.out.println("Username: " + cust.getUsername());
         System.out.println("Email: " + cust.getEmail());
-        System.out.println("Wallet: " + cust.getWallet());
+        System.out.println("Wallet: " + cust.getBalance());
 
         System.out.println("1. Change Username");
         System.out.println("2. Change Password");
