@@ -1,5 +1,6 @@
 package view;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 import model.UserType;
@@ -9,7 +10,7 @@ public class Main_menu {
 
     public static Scanner input = new Scanner(System.in);
 
-    public static void main_menu(){
+    public static void main_menu() throws IOException{
         System.out.println("GoFood as : ");
         System.out.println("1. GoSeller");
         System.out.println("2. GOCustomer");

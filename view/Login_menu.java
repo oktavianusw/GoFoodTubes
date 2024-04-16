@@ -1,15 +1,19 @@
 package view;
 
+import java.io.IOException;
 import java.util.Scanner;
 
+import javax.management.Notification;
+
 import controller.Login_controller;
+import controller.Notifications_controller;
 import model.UserType;
 
 public class Login_menu {
     public static Scanner input = new Scanner(System.in);
     public static Login_controller login_controller = new Login_controller();
     
-    public static void login(UserType userType){
+    public static void login(UserType userType) throws IOException{
         int attempts = 0;
         while (attempts < 3 ) {
             System.out.println();

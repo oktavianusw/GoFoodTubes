@@ -1,5 +1,6 @@
 package view;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 import model.Customer;
@@ -8,7 +9,7 @@ public class Customer_profile {
 
     public static Scanner input = new Scanner(System.in);
 
-    public static void showProfile(Customer cust) {
+    public static void showProfile(Customer cust) throws IOException {
         System.out.println("=============================");
         System.out.println("\tCustomer Profile");
         System.out.println("=============================");
@@ -35,7 +36,7 @@ public class Customer_profile {
         }
     }
 
-    public static void editProfile(Customer cust) {
+    public static void editProfile(Customer cust) throws IOException {
         System.out.println("=============================");
         System.out.println("\tEdit Profile");
         System.out.println("=============================");

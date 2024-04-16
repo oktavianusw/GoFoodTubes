@@ -1,5 +1,7 @@
 package controller;
 
+import java.io.IOException;
+
 import model.Customer;
 import model.Data_customer;
 import model.Data_seller;
@@ -8,10 +10,11 @@ import model.UserType;
 
 public class Login_controller {
 
-    public boolean login(String email, String password, UserType userType) {
+    public boolean login(String email, String password, UserType userType) throws IOException {
         if (userType.equals(UserType.CUSTOMER)) {
             for (Customer cust : Data_customer.cust) {
                 if (cust.getEmail().equals(email) && cust.getPassword().equals(password)) {
+                    Notifications_controller.send_message("Login successful!");
                     System.out.println();
                     System.out.println("Login successful. Welcome, " + cust.getUsername() + "!");
                     System.out.println();
