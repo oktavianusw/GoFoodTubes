@@ -5,6 +5,7 @@ public class Food {
     private String name;
     private double price;
     private double discountPercentage;
+    private Rating rating;
 
     public Food(int id, String name, double price, double discountPercentage) {
         this.id = id;
