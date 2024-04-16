@@ -34,7 +34,7 @@ public class Customer_menu {
                 // View_transaction();
                 break;
             case 4:
-                // Wallet();
+                Wallet_menu.main_menu(cust);
                 break;
             case 5:
                 // Wallet();

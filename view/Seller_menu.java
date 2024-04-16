@@ -1,12 +1,13 @@
 package view;
 import model.Seller;
+import controller.Seller_controller;
 
 import java.util.Scanner;
 
 public class Seller_menu {
     public static Scanner input = new Scanner(System.in);
 
-    public static void seller_menu(Seller cust){
+    public static void seller_menu(Seller sell){
         System.out.println("========================");
         System.out.println("\tSeller Menu");
         System.out.println("========================");
@@ -21,29 +22,29 @@ public class Seller_menu {
         System.out.println("Choose : ");
         switch (input.nextInt()) {
             case 1:
-                // View_profile();
+                 Seller_controller.View_profile(sell);
                 break;
             case 2:
-                // View_order();
+                Seller_controller.View_order(sell);
                 break;
             case 3:
-                // View_transaction();
+                Seller_controller.View_transaction(sell);
                 break;
             case 4:
-                // seller_menu();
+                Seller_controller.Food_menu(sell);
                 break;
             case 5:
-                // seller_menu();
+                Seller_controller.Income(sell);
                 break;
             case 6:
-                // seller_menu();
+                Seller_controller.Set_voucher(sell);
                 break;
             case 0:
                 // seller_menu();
                 break;
             default:
                 System.out.println("Invalid input");
-                seller_menu(cust);
+                seller_menu(sell);
                 break;
         }
     }

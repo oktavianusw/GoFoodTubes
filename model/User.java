@@ -6,6 +6,7 @@ public class User {
     private String email;
     private String password;
     private UserType userType;
+    private double balance;
     
     public User(int userId, String username, String email, String password, UserType userType) {
         this.userId = userId;
@@ -46,8 +47,17 @@ public class User {
     }
     public void setUserType(UserType userType) {
         this.userType = userType;
-    } 
+    }
+    public double getBalance() {
+        return balance;
+    }
+    public void decreaseBalance(double amount) {
+        this.balance -= amount;
+    }
 
+    public void increaseBalance(double amount) {
+        this.balance += amount;
+    }
     
 }
 
