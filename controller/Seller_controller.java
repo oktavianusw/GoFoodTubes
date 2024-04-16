@@ -8,23 +8,23 @@ public class Seller_controller {
         Seller_profile.showProfile(sell);
     }
 
-    public static void View_order(){
+    public static void View_order(Seller sell){
 
     }
 
-    public static void View_transaction(){
+    public static void View_transaction(Seller sell){
 
     }
 
-    public static void Food_menu(){
+    public static void Food_menu(Seller sell){
 
     }
 
-    public static void Income(){
+    public static void Income(Seller sell){
 
     }
 
-    public static void Set_voucher(){
+    public static void Set_voucher(Seller sell){
 
     }
 

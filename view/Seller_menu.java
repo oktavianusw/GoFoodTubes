@@ -25,19 +25,19 @@ public class Seller_menu {
                  Seller_controller.View_profile(sell);
                 break;
             case 2:
-                // View_order();
+                Seller_controller.View_order(sell);
                 break;
             case 3:
-                // View_transaction();
+                Seller_controller.View_transaction(sell);
                 break;
             case 4:
-                // seller_menu();
+                Seller_controller.Food_menu(sell);
                 break;
             case 5:
-                // seller_menu();
+                Seller_controller.Income(sell);
                 break;
             case 6:
-                // seller_menu();
+                Seller_controller.Set_voucher(sell);
                 break;
             case 0:
                 // seller_menu();
