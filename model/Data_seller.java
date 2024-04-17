@@ -18,6 +18,15 @@ public class Data_seller {
         sellers.add(new Seller(204, "KFC", "kfc@email.com", "password4", UserType.SELLER, "KFC", kfcMenu));
     }
 
+    public static Seller getUserbyEmail(String email) {
+//        for (Customer user : cust){
+//            if (user.getEmail().equals(email)) {
+//                return user;
+//            }
+//        }
+        return null;
+    }
+
     public void initData() {
         // McDonald's
         mcdonaldsMenu.add(new Item(1, "Big Mac", 10.0, 20, 0.1));

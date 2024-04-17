@@ -21,7 +21,7 @@ public class Seller_controller {
     }
 
     public static void Income(Seller sell){
-    
+
     }
 
     public static void Set_voucher(Seller sell){
