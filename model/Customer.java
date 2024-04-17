@@ -1,19 +1,20 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Customer extends User {
     private Cart cart;
     private double balance;
     private ArrayList<Voucher> vouchers;
-    private ArrayList<Transaction> transactions;
+    private List<Transaction> transactionsHistory;
     
     public Customer(int userId, String username, String email, String password, UserType userType, double balance, Cart cart) {
         super(userId, username, email, password, userType);
         this.cart = new Cart();
         this.balance = balance;
         this.vouchers = new ArrayList<Voucher>();
-        this.transactions = new ArrayList<Transaction>();
+        this.transactionsHistory = new ArrayList<>();
     }
 
     public Cart getCart() {
@@ -47,11 +48,15 @@ public class Customer extends User {
         this.vouchers = vouchers;
     }
 
-    public ArrayList<Transaction> getTransactions() {
-        return transactions;
+    public List<Transaction> getTransactions() {
+        return transactionsHistory;
     }
 
     public void setTransactions(ArrayList<Transaction> transactions) {
-        this.transactions = transactions;
+        this.transactionsHistory = transactions;
+    }
+
+    public void addTransaction(Transaction transaction) {
+        transactionsHistory.add(transaction);
     }
 }
