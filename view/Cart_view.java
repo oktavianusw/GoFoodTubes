@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 import model.Cart;
 import model.Customer;
-import model.Food;
+import model.Item;
 
 public class Cart_view {
 
@@ -17,11 +17,11 @@ public class Cart_view {
         System.out.println("========================");
         System.out.println("\tShopping Cart");
         System.out.println("========================");
-        for (Map.Entry<Food, Integer> entry : cart.getFoods().entrySet()) {
-            System.out.println("Food: " + entry.getKey().getName() + ", Quantity: " + entry.getValue());
+        for (Map.Entry<Item, Integer> entry : cart.getItems().entrySet()) {
+            System.out.println("Item: " + entry.getKey().getItem_name() + ", Quantity: " + entry.getValue());
         }
         System.out.println("Total Price: " + cart.getTotalPrice());
-
+    
         System.out.println("0. Back");
         switch (input.nextInt()) {
             case 0:

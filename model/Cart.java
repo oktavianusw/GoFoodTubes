@@ -4,42 +4,42 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Cart {
-    private Map<Food, Integer> foods;
+    private Map<Item, Integer> items;
 
     public Cart() {
-        this.foods = new HashMap<>();
+        this.items = new HashMap<>();
     }
 
-    public void addFood(Food food, int quantity) {
-        this.foods.put(food, quantity);
+    public void addItem(Item item, int quantity) {
+        this.items.put(item, quantity);
     }
 
-    public void removeFood(Food food) {
-        this.foods.remove(food);
+    public void removeItem(Item item) {
+        this.items.remove(item);
     }
 
-    public void increaseQuantity(Food food, int quantity) {
-        if (this.foods.containsKey(food)) {
-            this.foods.put(food, this.foods.get(food) + quantity);
+    public void increaseQuantity(Item item, int quantity) {
+        if (this.items.containsKey(item)) {
+            this.items.put(item, this.items.get(item) + quantity);
         }
     }
 
-    public void decreaseQuantity(Food food, int quantity) {
-        if (this.foods.containsKey(food)) {
-            int currentQuantity = this.foods.get(food);
-            this.foods.put(food, Math.max(currentQuantity - quantity, 0));
+    public void decreaseQuantity(Item item, int quantity) {
+        if (this.items.containsKey(item)) {
+            int currentQuantity = this.items.get(item);
+            this.items.put(item, Math.max(currentQuantity - quantity, 0));
         }
     }
 
     public double getTotalPrice() {
         double totalPrice = 0;
-        for (Map.Entry<Food, Integer> entry : this.foods.entrySet()) {
+        for (Map.Entry<Item, Integer> entry : this.items.entrySet()) {
             totalPrice += entry.getKey().getDiscountedPrice() * entry.getValue();
         }
         return totalPrice;
     }
 
-    public Map<Food, Integer> getFoods() {
-        return foods;
+    public Map<Item, Integer> getItems() {
+        return items;
     }
 }

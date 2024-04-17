@@ -3,11 +3,12 @@ package view;
 import controller.Wallet_controller;
 import model.Customer;
 
+import java.io.IOException;
 import java.util.Scanner;
 public class Wallet_menu {
     public static Scanner input = new Scanner(System.in);
 
-    public static void main_menu(Customer cust){
+    public static void main_menu(Customer cust) throws IOException{
         System.out.println("===============");
         System.out.println("\tCustomer Menu");
         System.out.println("===============");
