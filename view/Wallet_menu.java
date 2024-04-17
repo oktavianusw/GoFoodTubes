@@ -40,11 +40,11 @@ public class Wallet_menu {
                 main_menu(cust);
                 break;
             case 0:
-                Main_menu.main_menu();
-            default:
-                System.out.println("Invalid Input");
-                main_menu(cust);
-                break;
+                Customer_menu.customer_menu(cust);
+//            default:
+//                System.out.println("Invalid Input");
+//                main_menu(cust);
+//                break;
         }
     }
 

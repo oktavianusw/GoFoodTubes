@@ -73,6 +73,7 @@ public class Customer_profile {
 
     public static void changePassword (Customer cust){
         System.out.println("Enter new password: ");
+        input.nextLine();
         String newPassword = input.nextLine();
         System.out.println("Re-enter new password: ");
         String retypePassword = input.nextLine();
