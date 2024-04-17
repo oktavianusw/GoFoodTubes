@@ -13,6 +13,7 @@ public class Seller_controller {
     }
 
     public static void View_transaction(Seller sell){
+        
 
     }
 

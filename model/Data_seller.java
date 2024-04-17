@@ -15,7 +15,7 @@ public class Data_seller {
         sellers.add(new Seller(201, "McDonald's", "mcdonalds@email.com", "password2", UserType.SELLER, "McDonald's", mcdonaldsMenu));
         sellers.add(new Seller(202, "Starbucks", "starbucks@email.com", "password1", UserType.SELLER, "Starbucks", starbucksMenu));
         sellers.add(new Seller(203, "Subway", "subway@email.com", "password3", UserType.SELLER, "Subway", subwayMenu));
-        sellers.add(new Seller(204, "KFC", "kfc@email.com", "password4", UserType.SELLER, "KFC", kfcMenu));
+        sellers.add(new Seller(204, "KFC", "kfc@", "passkfc", UserType.SELLER, "KFC", kfcMenu));
     }
 
     public void initData() {
