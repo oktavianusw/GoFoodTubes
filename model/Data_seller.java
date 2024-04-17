@@ -18,7 +18,7 @@ public class Data_seller {
         sellers.add(new Seller(204, "KFC", "kfc@email.com", "password4", UserType.SELLER, "KFC", kfcMenu));
     }
 
-    private void initData() {
+    public void initData() {
         // McDonald's
         mcdonaldsMenu.add(new Item(1, "Big Mac", 10.0, 20, 0.1));
         mcdonaldsMenu.add(new Item(2, "Cheeseburger", 5.0, 15, 0.0));
@@ -77,5 +77,16 @@ public class Data_seller {
             }
             System.out.println("------------------------");
         }
+    }
+
+    public static Item getItemByID(int id) {
+        for (Seller seller : sellers) {
+            for (Item item : seller.getItems()) {
+                if (item.getItem_ID() == id) {
+                    return item;
+                }
+            }
+        }
+        return null;
     }
 }

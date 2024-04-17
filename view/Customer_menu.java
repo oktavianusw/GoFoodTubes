@@ -28,7 +28,7 @@ public class Customer_menu {
                 Customer_profile.showProfile(cust);
                 break;
             case 2:
-                Cart_view.showCart(cust);
+                Cart_view.cart_view(cust);
                 break;
             case 3:
                 // View_transaction();

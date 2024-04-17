@@ -13,7 +13,7 @@ public class Seller_profile {
         System.out.println("=============================");
         System.out.println("Username: " + sell.getUsername());
         System.out.println("Email: " + sell.getEmail());
-        System.out.println("Wallet: " + sell.getBalance());
+        // System.out.println("Wallet: " + sell.getBalance());
 
         System.out.println("1. Edit Profile");
         System.out.println("0. Back");
@@ -40,7 +40,7 @@ public class Seller_profile {
         System.out.println("=============================");
         System.out.println("Username: " + sell.getUsername());
         System.out.println("Email: " + sell.getEmail());
-        System.out.println("Wallet: " + sell.getBalance());
+        // System.out.println("Wallet: " + sell.getBalance());
 
         System.out.println("1. Change Username");
         System.out.println("2. Change Password");
