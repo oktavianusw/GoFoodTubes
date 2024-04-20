@@ -12,9 +12,7 @@ public class Login_controller {
 
     public boolean login(String email, String password, UserType userType) throws IOException {
         if (userType.equals(UserType.CUSTOMER)) {
-            System.out.println("if");
             for (Customer cust : Data_customer.cust) {
-                System.out.println(cust.getEmail() + cust.getPassword());
                 if (cust.getEmail().equals(email) && cust.getPassword().equals(password)) {
                     Notifications_controller.send_message("Login successful!");
                     System.out.println();
@@ -25,7 +23,6 @@ public class Login_controller {
                 }
             }
         } else {
-            System.out.println("else");
             for (Seller seller : Data_seller.sellers) {
                 System.out.println(seller.getEmail() + seller.getPassword());
                 if (seller.getEmail().equals(email) && seller.getPassword().equals(password)) {
