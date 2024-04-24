@@ -11,6 +11,18 @@ import model.Item;
 
 public class Order_menu {
 
+    // public static void displayItems() {
+
+    //     Data_seller dataSeller = new Data_seller();
+    //     for (Seller seller : Data_seller.sellers) {
+    //         System.out.println("Seller: " + seller.getStoreName());
+    //         for (Item item : seller.getItems()) {
+    //             System.out.println("Item ID: " + item.getItem_ID() + ", " + item.getItem_name() + ", Price: " + item.getPrice() + "$ , Stock: " + item.getStock()+" , Discount: "+item.getDiscountPercentage()+"%");
+    //         }
+    //         System.out.println("------------------------");
+    //     }
+    // }
+
     public static void order_menu(Customer cust) {
         Data_seller dataSeller = new Data_seller();
         Scanner input = new Scanner(System.in);

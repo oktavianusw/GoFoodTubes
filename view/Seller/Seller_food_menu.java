@@ -7,15 +7,23 @@ import java.util.Scanner;
 
 public class Seller_food_menu {
     static int id_item = 9999;
-    private static Seller seller;
     private static Scanner scanner = new Scanner(System.in);
 
-    public static void seller_food_menu(Seller s) {
-        seller = s;
-        System.out.println("Your items:");
-        for (Item item : seller.getItems()) {
-            System.out.println("Id : "+item.getItem_ID()+", "+item.getItem_name() + " - " + item.getPrice()+"$ - Stock : "+item.getStock()+" - Discount :"+item.getDiscountPercentage());
+    public static void seller_food_menu(Seller seller) {
+        System.out.println("Seller: " + seller.getStoreName());
+        if (seller.getItems() == null || seller.getItems().isEmpty()) {
+            System.out.println("No items found for this seller.");
+        } else {
+            for (Item item : seller.getItems()) {
+                if (item == null) {
+                    System.out.println("Null item found.");
+                } else {
+                    System.out.println("Item ID: " + item.getItem_ID() + ", " + item.getItem_name() + ", Price: " + item.getPrice() + "$ , Stock: " + item.getStock()+" , Discount: "+item.getDiscountPercentage()+"%");
+                }
+            }
         }
+        System.out.println("------------------------");
+    
         System.out.println("1. Add item");
         System.out.println("2. Edit item");
         System.out.println("3. Delete item");
@@ -25,13 +33,13 @@ public class Seller_food_menu {
         scanner.nextLine();
         switch (option) {
             case 1:
-                addItem();
+                addItem(seller);
                 break;
             case 2:
-                editItem();
+                editItem(seller);
                 break;
             case 3:
-                deleteItem();
+                deleteItem(seller);
                 break;
             case 4:
                 break;
@@ -40,7 +48,7 @@ public class Seller_food_menu {
         }
     }
 
-    private static void addItem() {
+    private static void addItem(Seller seller) {
         System.out.println("Enter the name of the item:");
         String name = scanner.nextLine();
         System.out.println("Enter the price of the item:");
@@ -58,7 +66,7 @@ public class Seller_food_menu {
         id_item++;
     }
 
-    private static void editItem() {
+    private static void editItem(Seller seller) {
         System.out.println("Enter the ID of the item you want to modifie:");
         int itemID = scanner.nextInt();
         for (Item item : seller.getItems()) {
@@ -105,7 +113,7 @@ public class Seller_food_menu {
         System.out.println("Item not found.");
     }
 
-    private static void deleteItem() {
+    private static void deleteItem(Seller seller) {
         System.out.println("Enter the ID of the item you want to modifie:");
         int itemID = scanner.nextInt();
         for (Item item : seller.getItems()) {

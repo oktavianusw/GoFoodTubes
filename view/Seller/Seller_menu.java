@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Seller_menu {
     public static Scanner input = new Scanner(System.in);
 
-    public static void seller_menu(Seller sell) throws IOException{
+    public static void seller_menu(Seller seller) throws IOException{
         System.out.println("========================");
         System.out.println("\tSeller Menu");
         System.out.println("========================");
@@ -23,29 +23,29 @@ public class Seller_menu {
         System.out.println("Choose : ");
         switch (input.nextInt()) {
             case 1:
-                 Seller_controller.View_profile(sell);
+                 Seller_controller.View_profile(seller);
                 break;
             case 2:
-                Seller_controller.View_order(sell);
+                Seller_controller.View_order(seller);
                 break;
             case 3:
-                Seller_controller.View_transaction(sell);
+                Seller_controller.Food_menu(seller);
                 break;
             case 4:
-                Seller_controller.Food_menu(sell);
+                Seller_controller.Food_menu(seller);
                 break;
             case 5:
-                Seller_controller.Income(sell);
+                Seller_controller.Income(seller);
                 break;
             case 6:
-                Seller_controller.Set_voucher(sell);
+                Seller_controller.Set_voucher(seller);
                 break;
             case 0:
                 Main_menu.main_menu();
                 break;
             default:
                 System.out.println("Invalid input");
-                seller_menu(sell);
+                seller_menu(seller);
                 break;
         }
     }

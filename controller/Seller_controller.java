@@ -20,7 +20,7 @@ public class Seller_controller {
 
     }
 
-    public static void Food_menu(Seller sell){
+    public static void Food_menu(Seller sell) throws IOException{
         Seller_food_menu.seller_food_menu(sell);
     }
 

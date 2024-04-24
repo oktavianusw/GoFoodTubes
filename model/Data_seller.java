@@ -7,6 +7,7 @@ public class Data_seller {
     public static ArrayList<Item> starbucksMenu = new ArrayList<>();
     public static ArrayList<Item> subwayMenu = new ArrayList<>();
     public static ArrayList<Item> kfcMenu = new ArrayList<>();
+    
 
     public static Seller[] sellers = {
         new Seller(201, "McDonald's", "mcdonalds@email.com", "password2", UserType.SELLER, "McDonald's", mcdonaldsMenu),
@@ -24,7 +25,7 @@ public class Data_seller {
         return null;
     }
 
-    public void initData() {
+    public static void initData() {
         // McDonald's
         mcdonaldsMenu.add(new Item(1, "Big Mac", 10.0, 20, 0.1));
         mcdonaldsMenu.add(new Item(2, "Cheeseburger", 5.0, 15, 0.0));
