@@ -1,5 +1,6 @@
 package view.Customer;
 
+import java.io.IOException;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -23,7 +24,7 @@ public class Order_menu {
     //     }
     // }
 
-    public static void order_menu(Customer cust) {
+    public static void order_menu(Customer cust) throws IOException {
         Data_seller dataSeller = new Data_seller();
         Scanner input = new Scanner(System.in);
         String continueOrdering;
@@ -31,7 +32,7 @@ public class Order_menu {
         for (Seller seller : Data_seller.sellers) {
             System.out.println("Seller: " + seller.getStoreName());
             for (Item item : seller.getItems()) {
-                System.out.println("Item ID: " + item.getItem_ID() + ", " + item.getItem_name() + ", Price: " + item.getPrice() + "$ , Stock: " + item.getStock()+" , Discount: "+item.getDiscountPercentage()+"%");
+                System.out.println("Item ID: " + item.getItem_ID() + ", " + item.getItem_name() + ", Price: " + item.getPrice() + "$ , Stock: " + item.getStock()+" , Discount: "+item.getDiscountPercentage()+"%"+", Rating: "+item.getRating().getAvg_rate());
             }
             System.out.println("------------------------");
         }

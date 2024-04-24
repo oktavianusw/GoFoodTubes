@@ -10,8 +10,15 @@ public class Cart {
         this.items = new HashMap<>();
     }
 
-    public void addItem(Item item, int quantity) {
+    public void fillWithOldCart(Cart oldCart) {
+        if (oldCart != null && oldCart.getItems() != null) {
+            this.items = new HashMap<>(oldCart.getItems());
+        }
+    }
+
+    public Cart addItem(Item item, int quantity) {
         this.items.put(item, quantity);
+        return this;
     }
 
     public void removeItem(Item item) {
@@ -41,5 +48,9 @@ public class Cart {
 
     public Map<Item, Integer> getItems() {
         return items;
+    }
+
+    public void clear() {
+        items.clear();
     }
 }

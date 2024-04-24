@@ -8,8 +8,13 @@ public class Transaction {
     private Date createdAt;
     private String paymentMethod;
     private double total;
+    private Cart cart;
 
-    public Transaction(Customer customer, Date createdAt, String paymentMethod, double total) {
+    public Transaction(Cart cart, Date createdAt, String paymentMethod, double total) {
+        this.cart = new Cart();
+        if (cart != null) {
+            this.cart.fillWithOldCart(cart);
+        }
         this.orderID = "Order" + (++counter);
         this.createdAt = createdAt;
         this.paymentMethod = paymentMethod;
@@ -30,5 +35,57 @@ public class Transaction {
 
     public double getTotal() {
         return total;
+    }
+
+    public static int getCounter() {
+        return counter;
+    }
+
+
+
+    public static void setCounter(int counter) {
+        Transaction.counter = counter;
+    }
+
+
+
+    public String getOrderID() {
+        return orderID;
+    }
+
+
+
+    public void setOrderID(String orderID) {
+        this.orderID = orderID;
+    }
+
+
+
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
+    }
+
+
+
+    public void setPaymentMethod(String paymentMethod) {
+        this.paymentMethod = paymentMethod;
+    }
+
+
+
+    public void setTotal(double total) {
+        this.total = total;
+    }
+
+
+
+    public Cart getCart() {
+        return cart;
+    }
+
+
+
+    public void setCart(Cart cart) {
+        this.cart = cart;
     }
 }

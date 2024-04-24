@@ -32,8 +32,7 @@ public class Customer_menu {
                 Cart_view.cart_view(cust);
                 break;
             case 3:
-                // View_transaction();
-            ;
+                Customer_Transaction_view.displayTransactionHistory(cust);
                 break;
             case 4:
                 Wallet_menu.main_menu(cust);

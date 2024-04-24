@@ -1,11 +1,14 @@
 package model;
 
+import java.util.List;
+
 public class Item {
     private int Item_ID;
     private String Item_name;
     private double price;
     private int stock;
     private double discountPercentage;
+    private Rating rating;
     
     public Item(int item_ID, String item_name, double price, int stock, double discountPercentage) {
         Item_ID = item_ID;
@@ -13,6 +16,16 @@ public class Item {
         this.price = price;
         this.stock = stock;
         this.discountPercentage = discountPercentage;
+        this.rating = new Rating();
+    }
+
+    public void setRating(Rating rating) {
+        this.rating = rating;
+    }
+
+    
+    public Rating getRating() {
+        return rating;
     }
 
     public int getItem_ID() {
@@ -51,5 +64,16 @@ public class Item {
     public double getDiscountedPrice() {
         return price - (price * discountPercentage);
     }
+
+    public static Item getItemById(List<Item> items, int id) {
+        for (Item item : items) {
+            if (item.getItem_ID() == id) {
+                return item;
+            }
+        }
+        return null;
+    }
+
+
 
 }

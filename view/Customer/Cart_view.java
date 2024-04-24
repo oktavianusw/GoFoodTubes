@@ -1,4 +1,5 @@
 package view.Customer;
+import java.io.IOException;
 import java.util.Scanner;
 
 import model.Customer;
@@ -7,14 +8,14 @@ import model.Item;
 
 public class Cart_view {
 
-    public static void cart_view(Customer cust) {
+    public static void cart_view(Customer cust) throws IOException {
         Scanner input = new Scanner(System.in);
         String continueOrdering;
 
         do {
             System.out.println("Your cart:");
             for (Item item : cust.getCart().getItems().keySet()) {
-                System.out.println("Item: " + item.getItem_name() + ", Price: " + item.getPrice() + "$, Quantity: " + cust.getCart().getItems().get(item));
+                System.out.println("Item ID : "+item.getItem_ID()+", Name: " + item.getItem_name() + ", Price: " + item.getPrice() + "$, Quantity: " + cust.getCart().getItems().get(item));
             }
 
             System.out.println("Do you want to modify your cart? (y/n)");
@@ -56,7 +57,7 @@ public class Cart_view {
                 break;
         
             default:
-                Order_menu.order_menu(cust);
+                Customer_menu.customer_menu(cust);
                 break;
         }
     }
