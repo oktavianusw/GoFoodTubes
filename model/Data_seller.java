@@ -19,10 +19,8 @@ public class Data_seller {
     }
 
     public static Seller getSellerbyEmail(String email) {
-        System.out.println("test");
         for (Seller seller : sellers) {
-            if (seller.getEmail().equals(email)) {
-                System.out.println("test");
+            if (email.equals(seller.getEmail())) {
                 return seller;
             }
         }

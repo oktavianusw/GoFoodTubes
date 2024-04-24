@@ -23,15 +23,13 @@ public class Login_controller {
                 }
             }
         } else {
-            for (Seller seller : Data_seller.sellers) {
-                System.out.println(seller.getEmail() + seller.getPassword());
-                if (seller.getEmail().equals(email) && seller.getPassword().equals(password)) {
-                    System.out.println();
-                    System.out.println("Login successful. Welcome, " + seller.getUsername() + "!");
-                    System.out.println();
-                    view.Seller_menu.seller_menu(seller);
-                    return true;
-                }
+            Seller seller = Data_seller.getSellerbyEmail(email);
+            if (seller != null && seller.getPassword().equals(password)) {
+                System.out.println();
+                System.out.println("Login successful. Welcome, " + seller.getUsername() + "!");
+                System.out.println();
+                view.Seller_menu.seller_menu(seller);
+                return true;
             }
         }
         return false;
