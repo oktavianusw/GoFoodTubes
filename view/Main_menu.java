@@ -13,7 +13,7 @@ public class Main_menu {
     public static void main_menu() throws IOException{
         System.out.println("GoFood as : ");
         System.out.println("1. GoSeller");
-        System.out.println("2. GOCustomer");
+        System.out.println("2. GoCustomer");
         System.out.println("0. Exit");
 
         System.out.print("Choose : ");

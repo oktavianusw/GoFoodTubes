@@ -8,13 +8,13 @@ import model.Data_seller;
 public class Wallet_controller {
     public static void view_balance(Customer cust) {
         System.out.println("Your Balance is: ");
-        System.out.println("Rp" + cust.getBalance());
+        System.out.println("$" + cust.getBalance());
     }
 
     public static void top_up(Customer cust, int amount) {
         cust.increaseBalance(amount);
         System.out.println("Your Balance is: ");
-        System.out.println("Rp" + cust.getBalance());
+        System.out.println("$" + cust.getBalance());
     }
 
     public static void transfer(Customer cust, String destination, int amount) {
