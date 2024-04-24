@@ -13,7 +13,7 @@ public class Login_menu {
     public static Scanner input = new Scanner(System.in);
     public static Login_controller login_controller = new Login_controller();
     
-    public static void login(UserType userType) throws IOException{
+    public static void login(UserType userType) throws IOException {
         int attempts = 0;
         while (attempts < 3 ) {
             System.out.println();
@@ -24,7 +24,7 @@ public class Login_menu {
             String email = input.nextLine();
             System.out.println("Password : ");
             String password = input.nextLine();
-
+    
             if (login_controller.login(email, password, userType)) {
                 return;
             } else {
@@ -34,5 +34,6 @@ public class Login_menu {
         }
         if (attempts >= 3) {
             System.out.println("You have exceeded the maximum number of login attempts.");
-        }    }
+        }
+    }
 }

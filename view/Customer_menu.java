@@ -41,7 +41,6 @@ public class Customer_menu {
                 Order_menu.order_menu(cust);
                 break;
             case 0:
-                Notifications_controller.send_message("Logout successful! Good Byeeeeee");
                 Main_menu.main_menu();
                 break;
             default:

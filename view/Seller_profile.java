@@ -2,12 +2,13 @@ package view;
 
 import model.Seller;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Seller_profile {
 
     public static Scanner input = new Scanner(System.in);
-    public static void showProfile(Seller sell) {
+    public static void showProfile(Seller sell) throws IOException {
         System.out.println("=============================");
         System.out.println("\tSeller Profile");
         System.out.println("=============================");
@@ -34,7 +35,7 @@ public class Seller_profile {
         }
     }
 
-    public static void editProfile(Seller sell) {
+    public static void editProfile(Seller sell) throws IOException {
         System.out.println("=============================");
         System.out.println("\tEdit Profile");
         System.out.println("=============================");

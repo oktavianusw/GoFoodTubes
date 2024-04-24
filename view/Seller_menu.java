@@ -2,21 +2,21 @@ package view;
 import model.Seller;
 import controller.Seller_controller;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Seller_menu {
     public static Scanner input = new Scanner(System.in);
 
-    public static void seller_menu(Seller sell){
+    public static void seller_menu(Seller sell) throws IOException{
         System.out.println("========================");
         System.out.println("\tSeller Menu");
         System.out.println("========================");
         System.out.println("1. View Profile");
-        System.out.println("2. View Order");
-        System.out.println("3. View Transaction");
-        System.out.println("4. Food Menu");
-        System.out.println("5. Income");
-        System.out.println("6. Set Voucher");
+        System.out.println("2. View Transaction");
+        System.out.println("3. Food Menu");
+        System.out.println("4. Income");
+        System.out.println("5. Set Voucher");
         System.out.println("0. Logout");
 
         System.out.println("Choose : ");
@@ -40,7 +40,7 @@ public class Seller_menu {
                 Seller_controller.Set_voucher(sell);
                 break;
             case 0:
-                // seller_menu();
+                Main_menu.main_menu();
                 break;
             default:
                 System.out.println("Invalid input");
