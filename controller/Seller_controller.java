@@ -1,10 +1,12 @@
 package controller;
 
+import java.io.IOException;
+
 import model.Seller;
 import view.Seller_profile;
 
 public class Seller_controller {
-    public static void View_profile(Seller sell){
+    public static void View_profile(Seller sell) throws IOException{
         Seller_profile.showProfile(sell);
     }
 

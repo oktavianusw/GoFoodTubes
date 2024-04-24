@@ -13,8 +13,9 @@ public class Login_controller {
     public boolean login(String email, String password, UserType userType) throws IOException {
         if (userType.equals(UserType.CUSTOMER)) {
             for (Customer cust : Data_customer.cust) {
+                System.out.println("Data : "+cust.getEmail() + " " + cust.getPassword());
+                System.out.println("Input : "+email + " " + password);
                 if (cust.getEmail().equals(email) && cust.getPassword().equals(password)) {
-                    Notifications_controller.send_message("Login successful!");
                     System.out.println();
                     System.out.println("Login successful. Welcome, " + cust.getUsername() + "!");
                     System.out.println();
@@ -22,9 +23,10 @@ public class Login_controller {
                     return true;
                 }
             }
-        } else {
+        } else if (userType.equals(UserType.SELLER)){
             for (Seller seller : Data_seller.sellers) {
-                System.out.println(seller.getEmail() + seller.getPassword());
+                System.out.println("Data : "+seller.getEmail() + " " + seller.getPassword());
+                System.out.println("Input : "+email + " " + password);
                 if (seller.getEmail().equals(email) && seller.getPassword().equals(password)) {
                     System.out.println();
                     System.out.println("Login successful. Welcome, " + seller.getUsername() + "!");
@@ -33,6 +35,9 @@ public class Login_controller {
                     return true;
                 }
             }
+        } else{
+            System.out.println("Invalid user type.");
+            return false;
         }
         return false;
     }

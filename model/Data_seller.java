@@ -3,26 +3,21 @@ package model;
 import java.util.ArrayList;
 
 public class Data_seller {
-    public ArrayList<Item> mcdonaldsMenu = new ArrayList<>();
-    public ArrayList<Item> starbucksMenu = new ArrayList<>();
-    public ArrayList<Item> subwayMenu = new ArrayList<>();
-    public ArrayList<Item> kfcMenu = new ArrayList<>();
+    public static ArrayList<Item> mcdonaldsMenu = new ArrayList<>();
+    public static ArrayList<Item> starbucksMenu = new ArrayList<>();
+    public static ArrayList<Item> subwayMenu = new ArrayList<>();
+    public static ArrayList<Item> kfcMenu = new ArrayList<>();
 
-    public static ArrayList<Seller> sellers = new ArrayList<>();
-
-    public Data_seller() {
-        initData();
-        sellers.add(new Seller(201, "McDonald's", "mcdonalds@email.com", "password2", UserType.SELLER, "McDonald's", mcdonaldsMenu));
-        sellers.add(new Seller(202, "Starbucks", "starbucks@email.com", "password1", UserType.SELLER, "Starbucks", starbucksMenu));
-        sellers.add(new Seller(203, "Subway", "subway@email.com", "password3", UserType.SELLER, "Subway", subwayMenu));
-        sellers.add(new Seller(204, "KFC", "kfc@", "passkfc", UserType.SELLER, "KFC", kfcMenu));
-    }
+    public static Seller[] sellers = {
+        new Seller(201, "McDonald's", "mcdonalds@email.com", "password2", UserType.SELLER, "McDonald's", mcdonaldsMenu),
+        new Seller(202, "Starbucks", "starbucks@email.com", "password1", UserType.SELLER, "Starbucks", starbucksMenu),
+        new Seller(203, "Subway", "subway@email.com", "password3", UserType.SELLER, "Subway", subwayMenu),
+        new Seller(204, "KFC", "seller", "sellerpass", UserType.SELLER, "KFC", kfcMenu)
+    };
 
     public static Seller getSellerbyEmail(String email) {
-        System.out.println("test");
         for (Seller seller : sellers) {
             if (seller.getEmail().equals(email)) {
-                System.out.println("test");
                 return seller;
             }
         }
