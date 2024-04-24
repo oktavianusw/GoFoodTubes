@@ -1,0 +1,10 @@
+public class User {
+    private int userId;
+    private String username;
+    private String email;
+    private String password;
+    private UserType userType;
+}
+Struktur data: UserType (Enum)
+Alasan: Enum digunakan untuk membatasi jenis-jenis yang valid untuk atribut userType. Dengan menggunakan enum, kita dapat memastikan bahwa hanya nilai-nilai yang valid dari tipe enumerasi UserType yang dapat digunakan
+

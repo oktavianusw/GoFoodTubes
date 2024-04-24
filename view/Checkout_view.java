@@ -46,7 +46,7 @@ public class Checkout_view {
         System.out.println("Payment Method: " + transaction.getPaymentMethod());
         System.out.println("Total: $" + transaction.getTotal());
 
-        cust.addTransaction(transaction);
+        cust.addTransaction(transaction);//add to transaction history
 
         System.out.println();
         System.out.println("Your order is being processed. Please wait for a moment. And go to the counter to get the food");

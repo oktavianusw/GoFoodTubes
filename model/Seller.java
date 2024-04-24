@@ -6,6 +6,7 @@ public class Seller extends User {
     private double income;
     private String storeName;
     private ArrayList<Item> items;
+    private ArrayList<Rating> ratings;
 
     public Seller(int userId, String username, String email, String password, UserType userType, String storeName, ArrayList<Item> items) {
         super(userId, username, email, password, userType);
