@@ -1,5 +1,6 @@
-package view;
+package view.Seller;
 import model.Seller;
+import view.Main_menu;
 import controller.Seller_controller;
 
 import java.io.IOException;

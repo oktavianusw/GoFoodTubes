@@ -1,4 +1,4 @@
-package view;
+package view.Customer;
 
 import controller.Wallet_controller;
 import model.Customer;

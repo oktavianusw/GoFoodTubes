@@ -1,4 +1,4 @@
-package view;
+package view.Customer;
 
 import java.util.Date;
 import java.util.Scanner;

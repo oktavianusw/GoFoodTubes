@@ -3,7 +3,8 @@ package controller;
 import java.io.IOException;
 
 import model.Seller;
-import view.Seller_profile;
+import view.Seller.Seller_food_menu;
+import view.Seller.Seller_profile;
 
 public class Seller_controller {
     public static void View_profile(Seller sell) throws IOException{
@@ -20,7 +21,7 @@ public class Seller_controller {
     }
 
     public static void Food_menu(Seller sell){
-
+        Seller_food_menu.seller_food_menu(sell);
     }
 
     public static void Income(Seller sell){

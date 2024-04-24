@@ -19,7 +19,7 @@ public class Login_controller {
                     System.out.println();
                     System.out.println("Login successful. Welcome, " + cust.getUsername() + "!");
                     System.out.println();
-                    view.Customer_menu.customer_menu(cust);
+                    view.Customer.Customer_menu.customer_menu(cust);
                     return true;
                 }
             }
@@ -31,7 +31,7 @@ public class Login_controller {
                     System.out.println();
                     System.out.println("Login successful. Welcome, " + seller.getUsername() + "!");
                     System.out.println();
-                    view.Seller_menu.seller_menu(seller);
+                    view.Seller.Seller_menu.seller_menu(seller);
                     return true;
                 }
             }

@@ -1,4 +1,4 @@
-package view;
+package view.Customer;
 
 import model.Transaction;
 import model.Customer;

@@ -1,4 +1,4 @@
-package view;
+package view.Customer;
 
 import java.io.IOException;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package view;
+package view.Customer;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -6,6 +6,7 @@ import java.util.Scanner;
 import controller.Notifications_controller;
 import model.Customer;
 import model.User;
+import view.Main_menu;
 
 public class Customer_menu {
 
