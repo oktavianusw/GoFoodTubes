@@ -7,7 +7,7 @@ public class Data_seller {
     public ArrayList<Item> starbucksMenu = new ArrayList<>();
     public ArrayList<Item> subwayMenu = new ArrayList<>();
     public ArrayList<Item> kfcMenu = new ArrayList<>();
-    
+
     public static ArrayList<Seller> sellers = new ArrayList<>();
 
     public Data_seller() {
@@ -18,12 +18,14 @@ public class Data_seller {
         sellers.add(new Seller(204, "KFC", "kfc@", "passkfc", UserType.SELLER, "KFC", kfcMenu));
     }
 
-    public static Seller getUserbyEmail(String email) {
-//        for (Customer user : cust){
-//            if (user.getEmail().equals(email)) {
-//                return user;
-//            }
-//        }
+    public static Seller getSellerbyEmail(String email) {
+        System.out.println("test");
+        for (Seller seller : sellers) {
+            if (seller.getEmail().equals(email)) {
+                System.out.println("test");
+                return seller;
+            }
+        }
         return null;
     }
 
@@ -82,7 +84,7 @@ public class Data_seller {
             System.out.println("Seller: " + seller.getStoreName());
             System.out.println("Items:");
             for (Item item : seller.getItems()) {
-                System.out.println("Item ID : "+item.getItem_ID()+"  Item: " + item.getItem_name() + ", Price: " + item.getPrice() + ", Stock: " + item.getStock()+" , Discount: "+item.getDiscountPercentage());
+                System.out.println("Item ID : " + item.getItem_ID() + "  Item: " + item.getItem_name() + ", Price: " + item.getPrice() + ", Stock: " + item.getStock() + " , Discount: " + item.getDiscountPercentage());
             }
             System.out.println("------------------------");
         }

@@ -14,7 +14,7 @@ public class Data_customer {
         Cart cart = new Cart();
         return cart;
     }
-    public static Customer getUserbyEmail(String email) {
+    public static Customer getCustomerbyEmail(String email) {
         for (Customer user : cust){
             if (user.getEmail().equals(email)) {
                 return user;
