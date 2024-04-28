@@ -17,10 +17,9 @@ public class Customer_menu {
         System.out.println("\tCustomer Menu");
         System.out.println("========================");
         System.out.println("1. View Profile");
-//        System.out.println("2. View Cart");
-        System.out.println("3. View Transaction");
-        System.out.println("4. Wallet");
-        System.out.println("5. Order Food");
+        System.out.println("2. View Transaction");
+        System.out.println("3. Wallet");
+        System.out.println("4. Order Food");
         System.out.println("0. Logout");
 
         System.out.println("Choose : ");
@@ -28,16 +27,13 @@ public class Customer_menu {
             case 1:
                 Customer_profile.showProfile(cust);
                 break;
-//            case 2:
-//                Cart_view.cart_view(cust, "");
-//                break;
-            case 3:
+            case 2:
                 Customer_Transaction_view.displayTransactionHistory(cust);
                 break;
-            case 4:
+            case 3:
                 Wallet_menu.main_menu(cust);
                 break;
-            case 5:
+            case 4:
                 Order_menu.order_menu(cust);
                 break;
             case 0:
