@@ -48,7 +48,7 @@ public class Checkout_view {
 
         System.out.println("Your order has been paid. Please wait for your order.");
 
-        Transaction transaction = new Transaction(new Cart(), storeName ,new Date(), paymentMethod, cust.getCart().getTotalPrice());
+        Transaction transaction = new Transaction(new Cart(), cust.getUsername(), storeName ,new Date(), paymentMethod, cust.getCart().getTotalPrice());
         transaction.getCart().fillWithOldCart(cust.getCart());
 
         System.out.println("Transaction Detail : ");

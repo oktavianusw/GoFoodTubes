@@ -22,6 +22,7 @@ public class Seller_transaction_view {
                 if (transaction.getStoreName().equalsIgnoreCase(store)) {
                     System.out.println("Transaction ID: " + transaction.getOrderID());
                     System.out.println("Date: " + transaction.getCreatedAt());
+                    System.out.println("Customer: " + transaction.getCustName());
                     System.out.println("Payment Method: " + transaction.getPaymentMethod());
                     System.out.println("Total Price: " + transaction.getTotal());
                     System.out.println("Items:");

@@ -26,16 +26,17 @@ public class Customer_Transaction_view {
                 System.out.println("Total Price: " + transaction.getTotal());
                 System.out.println("Items:");
                 for (Item item : transaction.getCart().getItems().keySet()) {
+                    System.out.println("Store:" + transaction.getStoreName());
                     double rate = item.getRating().getPersonalRate();
                     String comment = item.getRating().getComment();
                     if (rate != 0) {
                         System.out.println(
-                                "Item ID : " + item.getItem_ID() + ", Name: " + item.getItem_name() + ", Price: "
+                                "Item ID: " + item.getItem_ID() + ", Name: " + item.getItem_name() + ", Price: "
                                         + item.getPrice() + "$, Quantity: " + transaction.getCart().getItems().get(item)
                                         + ", Rating: " + rate + ", Comment: " + comment);
                     } else {
                         System.out.println(
-                                "Item ID : " + item.getItem_ID() + ", Name: " + item.getItem_name() + ", Price: "
+                                "Item ID: " + item.getItem_ID() + ", Name: " + item.getItem_name() + ", Price: "
                                         + item.getPrice() + "$, Quantity: " + transaction.getCart().getItems().get(item)
                                         + ", Rating: Not rated yet");
 
