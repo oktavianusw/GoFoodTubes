@@ -18,7 +18,6 @@ public class Seller_menu {
         System.out.println("2. View Transaction");
         System.out.println("3. Food Menu");
         System.out.println("4. Income");
-        System.out.println("5. Set Voucher");
         System.out.println("0. Logout");
 
         System.out.println("Choose : ");
@@ -34,9 +33,6 @@ public class Seller_menu {
                 break;
             case 4:
                 Seller_controller.Income(seller);
-                break;
-            case 5:
-                Seller_controller.Set_voucher(seller);
                 break;
             case 0:
                 Main_menu.main_menu();

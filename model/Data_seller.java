@@ -75,16 +75,16 @@ public class Data_seller {
         kfcMenu.add(new Item(40, "Twister Wrap", 4.5, 15, 0.0));
     }
 
-    public void displayAllItemsForSellers() {
-        for (Seller seller : sellers) {
-            System.out.println("Seller: " + seller.getStoreName());
-            System.out.println("Items:");
-            for (Item item : seller.getItems()) {
-                System.out.println("Item ID : " + item.getItem_ID() + "  Item: " + item.getItem_name() + ", Price: " + item.getPrice() + ", Stock: " + item.getStock() + " , Discount: " + item.getDiscountPercentage());
-            }
-            System.out.println("------------------------");
-        }
-    }
+//    public void displayAllItemsForSellers() {
+//        for (Seller seller : sellers) {
+//            System.out.println("Seller: " + seller.getStoreName());
+//            System.out.println("Items:");
+//            for (Item item : seller.getItems()) {
+//                System.out.println("Item ID : " + item.getItem_ID() + "  Item: " + item.getItem_name() + ", Price: " + item.getPrice() + ", Stock: " + item.getStock() + " , Discount: " + item.getDiscountPercentage());
+//            }
+//            System.out.println("------------------------");
+//        }
+//    }
 
     public static Item getItemByID(int id) {
         for (Seller seller : sellers) {

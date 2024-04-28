@@ -58,6 +58,7 @@ public class Checkout_view {
         System.out.println("Items price: $" + transaction.getTotal());
         System.out.println("Ongkir : $"+ ongkir);
         System.out.println("Total price: $" + (transaction.getTotal() + ongkir));
+        seller.addIncome(transaction.getTotal());
 
         System.out.println("Items : ");
         for (Item item : transaction.getCart().getItems().keySet()) {
