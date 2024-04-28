@@ -65,8 +65,8 @@ public class Checkout_view {
         
         cust.getCart().clear();
         System.out.println();
-        System.out.println("Your order is being processed. Please wait for a moment. And go to the counter to get the food");
-        System.out.println("Thank you for ordering! Please come again!");
+        System.out.println("Your order is being processed. Please wait for a driver.");
+        System.out.println("Thank you for ordering! Leave us a 5 star rating!");
         Customer_menu.customer_menu(cust);
 
     }
