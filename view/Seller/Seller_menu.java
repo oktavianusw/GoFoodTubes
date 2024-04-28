@@ -1,4 +1,5 @@
 package view.Seller;
+import model.Customer;
 import model.Seller;
 import view.Main_menu;
 import controller.Seller_controller;
@@ -26,18 +27,15 @@ public class Seller_menu {
                  Seller_controller.View_profile(seller);
                 break;
             case 2:
-                Seller_controller.View_order(seller);
+                Seller_transaction_view.displayTransactionHistory(seller);
                 break;
             case 3:
                 Seller_controller.Food_menu(seller);
                 break;
             case 4:
-                Seller_controller.Food_menu(seller);
-                break;
-            case 5:
                 Seller_controller.Income(seller);
                 break;
-            case 6:
+            case 5:
                 Seller_controller.Set_voucher(seller);
                 break;
             case 0:

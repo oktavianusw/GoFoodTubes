@@ -27,7 +27,7 @@ public class Order_menu {
     public static void order_menu(Customer cust) throws IOException {
         Data_seller dataSeller = new Data_seller();
         Scanner input = new Scanner(System.in);
-        String continueOrdering;
+        String continueOrdering, storeName = "";
 
         System.out.println("=================");
         System.out.println("\tStore ");
@@ -38,23 +38,26 @@ public class Order_menu {
             case 1:
                 for (Item item : Data_seller.mcdonaldsMenu) {
                     System.out.println("Item ID: " + item.getItem_ID() + ", " + item.getItem_name() + ", Price: " + item.getPrice() + "$ , Stock: " + item.getStock() + " , Discount: " + item.getDiscountPercentage() + "%" + ", Rating: " + item.getRating().getAvg_rate());
-
                 }
+                storeName = "McDonald's";
                 break;
             case 2:
                 for (Item item : Data_seller.starbucksMenu) {
                     System.out.println("Item ID: " + item.getItem_ID() + ", " + item.getItem_name() + ", Price: " + item.getPrice() + "$ , Stock: " + item.getStock() + " , Discount: " + item.getDiscountPercentage() + "%" + ", Rating: " + item.getRating().getAvg_rate());
                 }
+                storeName = "Starbucks";
                 break;
             case 3:
                 for (Item item : Data_seller.subwayMenu) {
                     System.out.println("Item ID: " + item.getItem_ID() + ", " + item.getItem_name() + ", Price: " + item.getPrice() + "$ , Stock: " + item.getStock() + " , Discount: " + item.getDiscountPercentage() + "%" + ", Rating: " + item.getRating().getAvg_rate());
                 }
+                storeName = "Subway";
                 break;
             case 4:
                 for (Item item : Data_seller.kfcMenu) {
                     System.out.println("Item ID: " + item.getItem_ID() + ", " + item.getItem_name() + ", Price: " + item.getPrice() + "$ , Stock: " + item.getStock() + " , Discount: " + item.getDiscountPercentage() + "%" + ", Rating: " + item.getRating().getAvg_rate());
                 }
+                storeName = "KFC";
                 break;
             default:
                 System.out.println("Invalid input");
@@ -89,7 +92,7 @@ public class Order_menu {
             continueOrdering = input.next();
         } while (continueOrdering.equalsIgnoreCase("y"));
 
-        Cart_view.cart_view(cust);
+        Cart_view.cart_view(cust, storeName);
 
     }
 }

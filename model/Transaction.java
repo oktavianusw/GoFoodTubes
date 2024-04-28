@@ -10,17 +10,23 @@ public class Transaction {
     private double total;
     private Cart cart;
 
-    public Transaction(Cart cart, Date createdAt, String paymentMethod, double total) {
+    private String storeName;
+
+    public Transaction(Cart cart, String storeName, Date createdAt, String paymentMethod, double total) {
         this.cart = new Cart();
         if (cart != null) {
             this.cart.fillWithOldCart(cart);
         }
         this.orderID = "Order" + (++counter);
+        this.storeName = storeName;
         this.createdAt = createdAt;
         this.paymentMethod = paymentMethod;
         this.total = total;
     }
 
+    public String getStoreName() {
+        return storeName;
+    }
     public String getOrder_ID() {
         return orderID;
     }

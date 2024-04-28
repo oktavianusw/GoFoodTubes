@@ -4,15 +4,18 @@ import java.util.Date;
 import java.util.Random;
 import java.util.Scanner;
 
-import model.Cart;
-import model.Customer;
-import model.Item;
-import model.Transaction;
+import model.*;
 import view.Main_menu;
 
 public class Checkout_view {
 
-    public static void checkout(Customer cust) throws IOException {
+    public static void checkout(Customer cust, String storeName) throws IOException {
+        Seller seller = null;
+        for (Seller sell : Data_seller.sellers){
+            if (sell.getStoreName().equals(storeName)){
+                seller = sell;
+            }
+        }
         Scanner input = new Scanner(System.in);
         Random rand = new Random();
         int ongkir = rand.nextInt(10)+1;
@@ -33,7 +36,7 @@ public class Checkout_view {
                     cust.decreaseBalance(cust.getCart().getTotalPrice());
                 } else {
                     System.out.println("Insufficient Gopay balance. Please choose another payment method or top up your Gopay.");
-                    Checkout_view.checkout(cust);
+                    Checkout_view.checkout(cust, storeName);
                 }
                 break;
             case 2:
@@ -45,7 +48,7 @@ public class Checkout_view {
 
         System.out.println("Your order has been paid. Please wait for your order.");
 
-        Transaction transaction = new Transaction(new Cart(), new Date(), paymentMethod, cust.getCart().getTotalPrice());
+        Transaction transaction = new Transaction(new Cart(), storeName ,new Date(), paymentMethod, cust.getCart().getTotalPrice());
         transaction.getCart().fillWithOldCart(cust.getCart());
 
         System.out.println("Transaction Detail : ");
@@ -62,6 +65,8 @@ public class Checkout_view {
         }
 
         cust.addTransaction(transaction); // add to transaction history
+        seller.addTransaction(transaction); // add to transaction history
+
         
         cust.getCart().clear();
         System.out.println();

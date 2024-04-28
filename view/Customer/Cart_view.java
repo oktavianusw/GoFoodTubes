@@ -8,7 +8,7 @@ import model.Item;
 
 public class Cart_view {
 
-    public static void cart_view(Customer cust) throws IOException {
+    public static void cart_view(Customer cust, String storeName) throws IOException {
         Scanner input = new Scanner(System.in);
         String continueOrdering;
 
@@ -53,7 +53,7 @@ public class Cart_view {
 
         switch (choose) {
             case 1:
-                Checkout_view.checkout(cust);
+                Checkout_view.checkout(cust, storeName);
                 break;
         
             default:
