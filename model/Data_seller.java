@@ -9,6 +9,9 @@ public class Data_seller {
     public static ArrayList<Item> kfcMenu = new ArrayList<>();
     
 
+
+    
+
     public static Seller[] sellers = {
         new Seller(201, "McDonald's", "mcdonalds@email.com", "password2", UserType.SELLER, "McDonald's", mcdonaldsMenu),
         new Seller(202, "Starbucks", "starbucks@email.com", "password1", UserType.SELLER, "Starbucks", starbucksMenu),
