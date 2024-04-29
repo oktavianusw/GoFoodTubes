@@ -3,11 +3,12 @@ package model;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Gofood {
+public class Data_gofood {
     private ArrayList<Voucher> voucher_gratis_ongkir;
     private ArrayList<Voucher> discount;
+
     
-    public Gofood(ArrayList<Voucher> voucher_gratis_ongkir, ArrayList<Voucher> discount) {
+    public Data_gofood() {
         this.voucher_gratis_ongkir = generateDummyVouchers();
         this.discount = generateDummyVouchers();
     }

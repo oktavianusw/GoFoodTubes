@@ -59,4 +59,6 @@ public class Customer extends User {
     public void addTransaction(Transaction transaction) {
         transactionsHistory.add(transaction);
     }
+
+    
 }

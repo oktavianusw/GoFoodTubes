@@ -22,5 +22,8 @@ public class Voucher {
         this.quantity = quantity;
     }
 
+    public String getName() {
+        return "Voucher Discount " + DiscountPercentage + "%";
+    }
     
 }

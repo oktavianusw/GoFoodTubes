@@ -16,7 +16,7 @@ public class Data_seller {
         new Seller(201, "McDonald's", "mcdonalds@email.com", "password2", UserType.SELLER, "McDonald's", mcdonaldsMenu),
         new Seller(202, "Starbucks", "starbucks@email.com", "password1", UserType.SELLER, "Starbucks", starbucksMenu),
         new Seller(203, "Subway", "subway@email.com", "password3", UserType.SELLER, "Subway", subwayMenu),
-        new Seller(204, "KFC", "seller", "sellerpsass", UserType.SELLER, "KFC", kfcMenu)
+        new Seller(204, "KFC", "seller", "sellerpass", UserType.SELLER, "KFC", kfcMenu)
     };
 
     public static Seller getSellerbyEmail(String email) {
